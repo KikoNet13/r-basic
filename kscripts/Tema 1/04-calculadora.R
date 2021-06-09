@@ -40,3 +40,32 @@ NA
 NaN
 
 choose(5,3)
+
+choose(4,2)
+
+choose(20,2)
+
+choose(10,9)
+
+choose(10,1)
+
+x=12
+
+(choose(20,x)*x)/(20%/%x)
+
+choose(8,4)
+
+choose(9,4)
+
+sin(1/6*pi)
+
+sin(60*pi/180)
+cos(60*pi/180)
+
+sinpi(1/3)
+
+asin(0.8660254) * 180/pi
+
+print(pi,22)
+
+x = pi^2/2
