@@ -5,6 +5,8 @@ seg_min = 60
 seg_hora = seg_min * 60
 seg_dia = seg_hora * 24
 seg_anyo = seg_dia * 365.25
+seg_anyo_bis = seg_dia * 366
+seg_anyo_norm = seg_dia * 365
 
 anyos = tot_seg %/% seg_anyo
 
