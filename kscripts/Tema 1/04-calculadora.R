@@ -69,3 +69,7 @@ asin(0.8660254) * 180/pi
 print(pi,22)
 
 x = pi^2/2
+
+miFuncion = function(x){x*2}
+
+miFuncion(4)
