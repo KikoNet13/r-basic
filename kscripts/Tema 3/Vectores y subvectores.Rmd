@@ -1,0 +1,33 @@
+---
+title: "Vectores y subvectores"
+author: "Kiko"
+date: "1/7/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Vectores
+
+```{r}
+x = c(8,4,6,3,7,9,5,6,8,4,3,2,4)
+x[length(x):0]
+xord = sort(x)
+xord[length(xord):(length(xord)-2)]
+x[x>=4]
+x[(x>4 & x%%2==0)|(x<4 & x%%2!=0)]
+y = x*3
+y
+x[y%%2==0]
+which(x>4)
+x[x<0]
+which(x<0)
+x = c()
+x
+y = NULL
+y
+z = c(x, 2, y, 7)
+z
+```

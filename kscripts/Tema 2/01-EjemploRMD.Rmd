@@ -51,3 +51,12 @@ Cuando queremos hacer la raíz cuadrada de dos, podemos hacerlo:
 - En `R` haciendo `r sqrt(2)`
 - La frase completa: $\sqrt{2}=$ `r sqrt(2)`
 
+```{r echo=FALSE, results='hide'}
+notas = c(5,4,3,6,9,7,5,3,4,2,1,7,9,5,6,8,4,3,1,6,8,8,4,7,9,5,9,7,4)
+n = length(notas)
+media = mean(notas)
+sd = sd (notas)
+```
+
+Este año he hecho $n=$ `r n` exámenes con una media de $\overline{x}=$ `r round(media, 2)` y una desviación típica de $s=$ `r round(sd,4)`
+

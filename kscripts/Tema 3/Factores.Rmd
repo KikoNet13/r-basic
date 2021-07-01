@@ -1,0 +1,37 @@
+---
+title: "Factores"
+author: "Kiko"
+date: "1/7/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Factores
+
+```{r}
+notas = c(1,2,4,3,1,4,3,2,4,1,2,3,4,1,2,3,4,2,1,2,3,4,1,4,2,1,4,2,1)
+notas
+
+notas.factor = factor(notas)
+notas.factor
+levels(notas.factor)
+
+levels(notas.factor) = c("Suspenso", "Suficiente", "Notable", "Excelente")
+notas.factor
+
+levels(notas.factor) = c("Suspenso", "Aprobado", "Aprobado", "Aprobado")
+notas.factor
+
+notas
+ordered(notas, labels = c("Sus", "Suf", "Not", "Exc"))
+notas
+
+notasord = ordered(notas, levels = c(2,1,4,3), labels = c("Suf", "Sus", "Exc", "Not"))
+notasord
+```
+

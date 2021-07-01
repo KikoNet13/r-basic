@@ -1,0 +1,26 @@
+---
+title: "Listas"
+author: "Kiko"
+date: "1/7/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Listas
+
+```{r}
+x = c(1,5,-2,6,-7,8,-3,4,-9)
+L = list(nombre="temperaturas", datos=x, media=mean(x), sumas=cumsum(x))
+L
+L$sumas
+L[[3]]
+3*L[[2]]
+str(L)
+names(L)
+```
+

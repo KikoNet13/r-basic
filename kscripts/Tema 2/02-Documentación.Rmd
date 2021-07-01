@@ -1,0 +1,65 @@
+---
+title: "Documentación de texto"
+author: "Kiko"
+date: "1/7/2021"
+output: pdf_document
+---
+
+# Título 1
+
+## Título 2
+
+### Título 3
+
+#### Título 4
+
+##### Título 5
+
+###### Título 6
+
+Esto es un texto llano. Podemos escribir sin ningún problema todo el texto que queramos para acompañar a tanto el código en `R` como las fórmulas en \LaTeX.
+
+Esto sería una nueva línea de texto. Fijaros que para que separe los párrafos necesitamos siempre al menos un doble intro.
+
+Para colocar cursiva podemos usar un asterisco: *esto sería un texto en cursiva* o bien usar una sola barra baja _esto también es cursiva_.
+
+Para colocar **negrita** podemos usar un doble asterisco: **esto es negrita** o bien una doble barra baja __esto también es negrita__.
+
+Los superíndices van con el *sombrerito*: este curso vale por mi nota^2^.
+Kiko^Kiko^
+
+Para tachar una palabra usamos una doble tilde ~~Las matemáticas son un rollo~~.
+
+endash: --
+
+emdash: ---
+
+elipsis: ...
+
+ecuaciones en línea $S=\pi\cdot r^2$.
+
+imagen ![Kiko](kiko.png)
+
+***
+
+Aquí empezamos otra cosa
+
+> Esto es una cita en bloque
+
+### Listas no ordenadas
+
+* 1
+* 2
+    + 2.1
+    + 2.2
+    + 2.3
+* 3
+
+### Listas ordenadas
+
+1. 1
+2. 2
+    + 2.1
+    + 2.2
+    + 2.3
+3. 3
