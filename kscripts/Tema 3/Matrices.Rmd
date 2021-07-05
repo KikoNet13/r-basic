@@ -1,0 +1,65 @@
+---
+title: "Matrices"
+author: "Kiko"
+date: "5/7/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Matrices (1ª parte)
+
+```{r}
+M = matrix(1:12, nrow=4)
+M
+M = matrix(1:12, nrow=4, byrow = T)
+M
+M = matrix(1:12, nrow=3)
+M
+M = matrix(1:12, nrow=5)
+M
+M = matrix(1, nrow = 4, ncol = 6)
+M
+```
+
+### Ejercicio
+
+```{r}
+M = matrix(0, nrow = 3, ncol = 5)
+M
+vec = 1:12
+M = matrix(vec, nrow = 3)
+M
+```
+
+## Matrices (2ª parte)
+
+```{r}
+M = rbind(M, c(1,2,3,4), -4:-1)
+M
+M = cbind(M, seq(0, 100, length.out = 5))
+M
+M_diag = diag(1:9)
+M_diag
+```
+
+## Propiedades matrices
+
+```{r}
+m = matrix(1:20, nrow = 4)
+m
+diag(m)
+nrow(m)
+ncol(m)
+dim(m)
+sum(m)
+prod(m)
+mean(m)
+colSums(m)
+rowSums(m)
+colMeans(m)
+rowMeans(m)
+```
+
