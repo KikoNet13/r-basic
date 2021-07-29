@@ -1,0 +1,149 @@
+---
+title: "Tema 3 - Tarea"
+author: "Kiko"
+date: "29/7/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Ejercicio 
+
+```{r}
+
+```
+
+
+## Ejercicio 1
+
+Cread un vector llamado "Harry" formado por la sucesión de números consecutivos entre el -10 y 27. Pedidle a `R` que os devuelva el elemento de índice 7. Escribid el resultado.
+
+```{r}
+Harry = c(-10:27)
+Harry[7]
+```
+
+
+## Ejercicio 2
+
+Dad el máximo de la sucesión (100*2^n -7*3^n) con n=0,...,200
+
+```{r}
+n = c(0:200)
+a = sapply(n, FUN = function(n){100*2^n-7*3^n})
+max(a)
+```
+
+## Ejercicio 3
+
+Cread la sucesión de números consecutivos entre 0 y 40. A continuación, cread el vector (3*5^n - 1) con n=0,...,40. Ponedle como nombre x. Ahora, dad el subvector de los elementos que son estrictamente mayores que 3.5
+
+```{r}
+n = c(0:40)
+x = sapply(n, FUN = function(n){3*5^n-1})
+x[x>3.5]
+```
+
+## Ejercicio 4
+
+Cread una función que os devuelva la parte real, la imaginaria, el módulo, el argumento y el conjugado de un número, mostrando solo 2 cifras significativas
+
+RECOMENDACIÓN: En algún momento os hará falta utilizar vectores
+
+Ejemplos: $3+2i$, $0.8+3.4i$ y  $4.6-1i$
+
+```{r}
+infonum = function(x) {
+  list("Real"= round(Re(x),2), "Imaginaria" = round(Im(x),2), "Módulo" = round(Mod(x),2), "Argumento" = round(Arg(x),2), "Conjugado" = round(Conj(x),2))
+}
+infonum(3+2i)
+infonum(0.8+3.4i)
+infonum(4.6-1i)
+```
+
+## Ejercicio 5
+
+Cread una función que resuelva ecuaciones de segundo grado (de la forma Ax^2+Bx+C=0). No importa, por ahora, que tengáis en cuenta las que no tienen solución
+
+RECOMENDACIÓN: En algún momento os hará falta utilizar vectores
+
+Ejemplos: $x^2-5x+6=0$, $2x^2-7x+3=0$ y $-x^2+7x-10=0$
+
+```{r}
+ecuacion2grado = function(a, b, c) {
+  sol1 = (-b + sqrt(b^2 - 4*a*c)) / (2*a)
+  sol2 = (-b - sqrt(b^2 - 4*a*c)) / (2*a)
+  c(sol1, sol2)
+}
+ecuacion2grado(1, -5, 6)
+ecuacion2grado(2, -7, 3)
+ecuacion2grado(-1, +7, -10)
+```
+
+## Ejercicio 6
+
+Tomando el vector vec = c(0,9,98,2,6,7,5,19,88,20,16,0), dad 3 opciones diferentes para calcular el subvector c(9,19,20,16)
+
+Tomando el vector vec definido en el apartado anterior, buscad
+
+    - qué entradas son pares
+
+    - qué entradas no son pares y mayores que 20
+
+    - dónde toma vec su valor máximo
+
+    - dónde toma vec sus valores mínimos
+
+```{r}
+vec = c(0,9,98,2,6,7,5,19,88,20,16,0)
+vec[c(2,8,10,11)]
+vec[vec>8 & vec<21]
+vec[-which(vec>80 | vec<9)]
+vec[vec%%2==0]
+vec[vec%%2!=0 & vec>20]
+which.max(vec)
+which(vec==min(vec))
+```
+
+## Ejercicio 7
+
+Dad la entrada (2,2) de A · (A + A) · A, con
+$$A=\begin{pmatrix} 1 & 3 \\ 2 & 4 \end{pmatrix}$$
+
+```{r}
+A = rbind(c(1,3), c(2,4))
+res = A %*% (A+A) %*% A
+res[2,2]
+```
+
+## Ejercicio 8
+
+Dad los valores propios de la matriz
+$$B=\begin{pmatrix} 2 & 4 & -6 \\ 0 & 0 & 3 \\ 0 & -2 & 5 \end{pmatrix}$$
+
+```{r}
+B = rbind(c(2,4,-6), c(0,0,3), c(0,-2,5))
+eigen(B)$values
+```
+
+## Ejercicio 9
+
+Dad, redondeando a 3 cifras decimales, los vectores propios de la matriz
+$$C=\begin{pmatrix} -48 & 35 & -12 \\ -134 & 95 & -32 \\ -194 & 133 & -44 \end{pmatrix}$$
+
+```{r}
+C = rbind(c(-48,35,-12), c(-134,95,-32), c(-194,133,-44))
+round(eigen(C)$vectors,3)
+```
+
+## Ejercicio 10
+
+Dad el rango de la matriz
+$$D=\begin{pmatrix} -2 & -8 & -2 & 3 \\ -3 & -6 & -1 & 2 \\ -9 & -22 & -3 & 7 \\ -18 & -44 & -8 & 15 \end{pmatrix}$$
+
+```{r}
+D = rbind(c(-2,-8,-2,3), c(-3,-6,-1,2), c(-9,-22,-3,7), c(-18,-44,-8,15))
+qr(D)$rank
+```
